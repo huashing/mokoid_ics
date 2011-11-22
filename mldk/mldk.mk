@@ -15,8 +15,8 @@ PRODUCT_COPY_FILES += \
 #    device/mokoid/mldk/cdata.ko:root/lib/modules/cdata.ko
 
 # If we get a real board, put these in.
-#PRODUCT_COPY_FILES += \
-#    device/mokoid/dma6410xp/init.rc:root/init.rc \
+PRODUCT_COPY_FILES += \
+    device/mokoid/mldk/init.rc:root/init.rc
 #    device/mokoid/dma6410xp/init.dma6410xp.rc:root/init.dma6410xp.rc
 
 # Overrides (see build.prop for results)
