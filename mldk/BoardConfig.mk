@@ -8,6 +8,19 @@ TARGET_ARCH_VARIANT := armv7-a-neon
 ARCH_ARM_HAVE_TLS_REGISTER := true
 
 #
+# EGL configuration (no EGL at Samsung Exynos 4210)
+#
+BOARD_EGL_CFG := device/mokoid/mldk/egl.cfg
+
+#
+# Graphics configuration
+# 
+#BOARD_USES_HGL := true
+#BOARD_USES_OVERLAY := true
+#BOARD_USES_COPYBIT := true
+USE_OPENGL_RENDERER := true
+
+#
 # Some general configurations
 #
 BOARD_USES_GENERIC_AUDIO := true

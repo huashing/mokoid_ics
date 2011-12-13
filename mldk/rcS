@@ -1,0 +1,16 @@
+#! /bin/sh
+
+PATH=/bin:/sbin:/system/bin:/system/sbin
+export PATH
+
+mount -o remount,rw / /
+
+if [ -e /proc ] && ! [ -e /proc/mounts ]; then
+    mount -t proc proc /proc
+fi
+
+if [ -e /sys ] && grep -q sysfs /proc/filesystems; then
+    mount -t sysfs sysfs /sys
+fi
+
+exit 0

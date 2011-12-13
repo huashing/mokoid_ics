@@ -16,8 +16,15 @@ PRODUCT_COPY_FILES += \
 
 # If we get a real board, put these in.
 PRODUCT_COPY_FILES += \
-    device/mokoid/mldk/init.rc:root/init.rc
-#    device/mokoid/dma6410xp/init.dma6410xp.rc:root/init.dma6410xp.rc
+     device/mokoid/mldk/init.nfs.rc:root/init.rc \
+     device/mokoid/mldk/egl.cfg:system/lib/egl/egl.cfg
+
+# DMA210L keypad
+PRODUCT_COPY_FILES += \
+     device/mokoid/smdkv210/s3c-keypad.kl:system/usr/keylayout/s3c-keypad.kl
+
+#device/mokoid/omap3/init.rc:root/init.rc
+#     device/mokoid/mldk/rcS:root/etc/init.d/rcS \
 
 # Overrides (see build.prop for results)
 PRODUCT_NAME := mldk
